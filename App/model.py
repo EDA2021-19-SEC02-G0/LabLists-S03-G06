@@ -54,9 +54,9 @@ def newCatalog():
     catalog['books'] = lt.newList("ARRAY_LIST")
     catalog['authors'] = lt.newList('ARRAY_LIST',
                                     cmpfunction=compareauthors)
-    catalog['tags'] = lt.newList('ARRAY_LIST',
+    catalog['tags'] = lt.newList('SINGLE_LINKED',
                                  cmpfunction=comparetagnames)
-    catalog['book_tags'] = lt.newList('ARRAY_LIST')
+    catalog['book_tags'] = lt.newList('SINGLE_LINKED')
 
     return catalog
 
